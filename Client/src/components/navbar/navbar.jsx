@@ -38,34 +38,34 @@ export function Navbar(){
                                     <p>Inicio</p>
                                 </div>
                             </NavLink>
-                            <NavLink className='active'>
+                            <NavLink >
                                 <div className="nav-item">
                                     <BusinessIcon />
-                                    <p>Areas</p>
+                                    <p className='active'>Areas</p>
                                 </div>
                             </NavLink>
-                            <NavLink className='active'>
+                            <NavLink >
                                 <div className="nav-item">
                                     <InfoIcon />
-                                    <p>¿Quienes Somos?</p>
+                                    <p className='active'>¿Quienes Somos?</p>
                                 </div>
                             </NavLink>
-                            <NavLink className='active'>
+                            <NavLink >
                                 <div className="nav-item">
                                     <GroupIcon />
-                                    <p>Equipo</p>
+                                    <p className='active'>Equipo</p>
                                 </div>
                             </NavLink>
-                            <NavLink className='active'>
+                            <NavLink >
                                 <div className="nav-item">
                                     <LocationOnIcon />
-                                    <p>Ubicación</p>
+                                    <p className='active'>Ubicación</p>
                                 </div>
                             </NavLink>
-                            <NavLink className='active'>
+                            <NavLink >
                                 <div className="nav-item">
                                     <ContactMailIcon />
-                                    <p>Contacto</p>
+                                    <p className='active'>Contacto</p>
                                 </div>
                             </NavLink>
                         </ul>

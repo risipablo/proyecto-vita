@@ -1,13 +1,13 @@
 
 .container-areas{
     min-height: 60vh;
-    padding: 4.8rem 0;
+    padding: 4.8rem 0 1.5rem;
     text-align: center;
 }
 
 
 .container-areas h2{
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 1.2rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -55,13 +55,14 @@
     bottom: 0;
     width: 100%;
     margin: 0;
-    padding: 10px;
+    padding: 12px;
     background: rgba(12, 12, 12, 0.7);
     color: #fff;
     text-align: center;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -77,11 +78,6 @@
     .personal-card-css {
         width: 100%;
         height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .personal-card-css {
-        width: 100%;
+        margin: .7rem .8rem;
     }
 }
