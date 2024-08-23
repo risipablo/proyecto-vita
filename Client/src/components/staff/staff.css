@@ -1,0 +1,53 @@
+.container-staff {
+    min-height: 60vh;
+    padding: 4.3rem 0 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 .3rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.ver-mas-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -100%);
+    background-color: rgb(15, 57, 105);
+    color: rgb(252, 249, 249);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas-btn:hover {
+    background-color: rgba(26, 81, 143, 0.9);
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .ver-mas-btn {
+        padding: .6rem;
+    }
+}
