@@ -32,7 +32,7 @@ export function Navbar(){
                 <div className="navbar">
                     <div className={`menu ${openMenu ? 'open' : ''}`} >
                         <ul>
-                            <NavLink className='active'>
+                            <NavLink className='active' to="/">
                                 <div className="nav-item">
                                     <HomeIcon />
                                     <p>Inicio</p>
@@ -78,8 +78,9 @@ export function Navbar(){
                     </div>
 
                     <div className="logo">
-                        <img src={logo} alt="logo" />
-                        <NavLink to="/"></NavLink>
+                        <NavLink to="/">
+                        <img src={logo} alt="logo"  />
+                        </NavLink>
                     </div>
                 </div>
             </div>
