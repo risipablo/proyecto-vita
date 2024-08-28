@@ -1,6 +1,6 @@
-.container-staff {
+.container-staff, .personal-container {
     min-height: 60vh;
-    padding: 4.8rem 0 1.5rem;
+    padding: 4.8rem 0 ;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -10,14 +10,13 @@
 .image-container {
     position: relative;
     display: inline-block;
-    margin: 0 .3rem;
+    /* margin: 0 .2rem; */
 }
 
 .image-container img {
     width: 100%;
     height: auto;
     max-width: 600px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 

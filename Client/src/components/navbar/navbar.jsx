@@ -1,77 +1,83 @@
-import { NavLink } from "react-router-dom";
-import './navbar.css'
-import { useState } from "react";
-import logo  from '../imagenes/logo.png'
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import BusinessIcon from '@mui/icons-material/Business';
 import InfoIcon from '@mui/icons-material/Info';
 import GroupIcon from '@mui/icons-material/Group';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import logo from '../imagenes/logo.png'; 
+import "./navbar.css"
 
-
-export function Navbar(){
-    const [openMenu, setOpenMenu] = useState (false)
+export function Navbar() {
+    const [openMenu, setOpenMenu] = useState(false);
+    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
-        document.body.classList.toggle('open',!openMenu)
-    }
+        document.body.classList.toggle('open', !openMenu);
+    };
 
-    
-    const close = () => {
+    const closeMenu = () => {
         setOpenMenu(false);
-        document.body.classList.remove('open')
-    }
+        setIsSubmenuOpen(false);
+        document.body.classList.remove('open');
+    };
 
+    const toggleSubmenu = () => {
+        setIsSubmenuOpen(!isSubmenuOpen);
+    };
 
-    return(
+    return (
         <nav>
-            <div className={`overlay ${openMenu ? 'open' : ''}`} onClick={close}> </div>
+            <div className={`overlay ${openMenu ? 'open' : ''}`} onClick={closeMenu}></div>
             <div className="container-navbar">
                 <div className="navbar">
-                    <div className={`menu ${openMenu ? 'open' : ''}`} >
+                    <div className={`menu ${openMenu ? 'open' : ''}`}>
                         <ul>
-                            <NavLink className='active' to="/">
+                            <NavLink to="/" onClick={closeMenu}>
                                 <div className="nav-item">
                                     <HomeIcon />
-                                    <p>Inicio</p>
+                                    <a className='active'>Inicio</a>
                                 </div>
                             </NavLink>
-                            <NavLink >
+                            <NavLink to="/areas" onClick={closeMenu}>
                                 <div className="nav-item">
                                     <BusinessIcon />
-                                    <p className='active'>Areas</p>
+                                    <a className='active'>Áreas</a>
                                 </div>
                             </NavLink>
-                            <NavLink >
-                                <div className="nav-item">
-                                    <InfoIcon />
-                                    <p className='active'>¿Quienes Somos?</p>
+                            <div className="nav-item" onClick={toggleSubmenu}>
+                                <InfoIcon />
+                                <a className='active'>¿Quiénes Somos?</a>
+                                <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
+                                    <NavLink to="/dueños/sabrina" className="submenu-item" onClick={closeMenu}>Sabrina Ramos</NavLink>
+                                    <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>Rodrigo Feijoo</NavLink>
+                                    <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>Daian Rodríguez</NavLink>
                                 </div>
-                            </NavLink>
-                            <NavLink >
+                            </div>
+                            <NavLink to="/personal" onClick={closeMenu}>
                                 <div className="nav-item">
                                     <GroupIcon />
-                                    <p className='active'>Equipo</p>
+                                    <a className='active'>Equipo</a>
                                 </div>
                             </NavLink>
-                            <NavLink >
+                            <NavLink to="/ubicacion" onClick={closeMenu}>
                                 <div className="nav-item">
                                     <LocationOnIcon />
-                                    <p className='active'>Ubicación</p>
+                                    <a className='active'>Ubicación</a>
                                 </div>
                             </NavLink>
-                            <NavLink >
+                            <NavLink to="/contacto" onClick={closeMenu}>
                                 <div className="nav-item">
                                     <ContactMailIcon />
-                                    <p className='active'>Contacto</p>
+                                    <a className='active'>Contacto</a>
                                 </div>
                             </NavLink>
                         </ul>
                     </div>
                     
-                    <div onClick={toggleMenu} className={`menu-icon ${openMenu ? 'open' : ''}`} >
+                    <div onClick={toggleMenu} className={`menu-icon ${openMenu ? 'open' : ''}`}>
                         <span></span>
                         <span></span>
                         <span></span>
@@ -79,11 +85,11 @@ export function Navbar(){
 
                     <div className="logo">
                         <NavLink to="/">
-                        <img src={logo} alt="logo"  />
+                            <img src={logo} alt="logo" />
                         </NavLink>
                     </div>
                 </div>
             </div>
         </nav>
-    )
+    );
 }

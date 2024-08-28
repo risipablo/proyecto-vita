@@ -1,0 +1,99 @@
+
+[
+    {
+        "id":1,
+        "nombre": "Natalia Gomez",
+        "rol": "Lic. en Psicologia"
+    },
+    
+    {
+        "id":2,
+        "nombre": "Cynthia Pellegrinelli",
+        "rol": "Farmacéutica y Terapeuta floral"
+    },
+    
+    {
+        "id":3,
+        "nombre": "Louder Piestek Santillan",
+        "rol": "Lic. en Kinesiologia y Fisiatria"
+    },
+    
+    {
+        "id":4,
+        "nombre": "Andrea Ceballos",
+        "rol": "Lic. en Psicologia"
+    },
+    
+    {
+        "id":5,
+        "nombre": "Claudia Armando",
+        "rol": "Lic. en Psicologia"
+    },
+    
+    {
+        "id":6,
+        "nombre": "Manuela Gallucci",
+        "rol": "Lic. en Psicologia"
+    },
+
+    {
+        "id":7,
+        "nombre": "Angelina Tortarolo",
+        "rol": "Profesora de Yoga"
+    },
+
+    {
+        "id":8,
+        "nombre": "Mariangeles Pezzutti",
+        "rol": "Lic. en Nutrición"
+    },
+
+    {
+        "id":9,
+        "nombre": "Cecilia Meneses",
+        "rol": "Lic. en Nutrición"
+    },
+
+    
+    {
+        "id":10,
+        "nombre": "Natalia Cavanna",
+        "rol": "Lic. en Psicologia y Sexologa"
+    },
+
+    
+    {
+        "id":11,
+        "nombre": "Luca Gallucci",
+        "rol": "Lic. en Kinesiologia"
+    },
+
+    
+    {
+        "id":12,
+        "nombre": "Agostina Antedooro",
+        "rol": "Instructora de Yoga"
+    },
+
+    
+    {
+        "id":13,
+        "nombre": "Florencia Moreno",
+        "rol": "Nutricionista"
+    },
+
+    
+    {
+        "id":14,
+        "nombre": "Estefania Marin",
+        "rol": "Lic. en Psicologia"
+    },
+
+    
+    {
+        "id":15,
+        "nombre": "Gabriela Gonzales",
+        "rol": "Lic. en Psicologia"
+    }
+
+]

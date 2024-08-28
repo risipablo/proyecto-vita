@@ -1,4 +1,5 @@
 
+
 import { Areas } from '../areas/areas';
 import { Contacto } from '../contacto/contacto';
 import { Dueños } from '../dueños/dueños';
@@ -25,7 +26,7 @@ export function Home(){
             </section>
 
             <Contacto/>
-            
+
         </div>
     )
 }

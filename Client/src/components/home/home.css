@@ -7,16 +7,32 @@
     background-color: rgb(250, 252, 254);
 }
 
+
+
 .container-ubicacion{
     min-height: 60vh;
-    padding: 4.8rem 0 1.5rem ;
+    padding: 4.8rem 0;
     text-align: center;
     font-optical-sizing: auto;
 }
 
+
 .container-ubicacion h2{
     letter-spacing: 3px;
+    color:#2e3762;
+    font-weight: 700;
     font-size: 2rem;
-    margin-bottom: 1.2rem;
-    font-size: 600;
+    margin-bottom: 1.8rem;
+}
+
+
+@media (min-width: 850px) {
+    .container-ubicacion{
+        padding: 4.8rem 2rem;
+    }
+
+    .container-ubicacion h2{
+        font-size: 2.2rem;
+    }
+    
 }

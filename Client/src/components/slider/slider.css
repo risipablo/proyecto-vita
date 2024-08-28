@@ -1,9 +1,16 @@
+
+.inicio{
+    width: 100%;
+    /* min-height: 60vh; */
+    margin: 0 auto;
+}
+
 .image-home {
     position: relative;
     display: flex; 
     flex-direction: column;
     width: 100%; 
-    padding: 4.8rem 0 0;
+    padding: 4.8rem 0 ;
     text-align: center;
 }
 
@@ -11,7 +18,7 @@
 .responsive-image {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 1200px;
     object-fit: cover;
 }
 
@@ -31,20 +38,20 @@
 }
 
 @media (min-width: 768px) {
+
+    .responsive-image {
+        max-height: 800px; /* Ajusta la altura máxima para pantallas grandes */
+        object-fit: cover;
+    }
+
+
     .centered-text p {
         font-size: 2rem; /* Tamaño de fuente más grande para pantallas más grandes */
     }
 }
 
 
-
 /* Turnos */
-.inicio{
-    width: 100%;
-    min-height: 60vh;
-    margin: 0 auto;
-}
-
 
 .turno{
     margin-top: 25px;
