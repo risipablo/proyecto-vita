@@ -1,21 +1,20 @@
-import "./staff.css"
-import equipo from "../imagenes/equipo.png"
-import { NavLink } from "react-router-dom"
+import "./staff.css";
+import { NavLink } from "react-router-dom";
 
-export function Staff(){
+export function Staff() {
+  return (
+    <section id="equipo" className="container-staff">
+      <h2> NUESTRO EQUIPO</h2>
+      <div className="image-container">
+        <p>Contamos con una amplia plantilla de profesionales</p>
 
-    return(
-        <section className="container-staff">
-            <div className="image-container">
-                <img src={equipo} alt="equipo" />
-                <NavLink to="/personal"  >
-                    <button className="ver-mas-btn">
-                    Ver Más
-                    </button>
-                      
-                </NavLink> 
-                    
-            </div>
-        </section>
-    )
+      </div>
+      <NavLink to="/personal">
+          <button className="ver-mas-btn">
+            Ver Más
+            <i className="fa-solid fa-arrow-right"></i>
+          </button>
+        </NavLink>
+    </section>
+  );
 }

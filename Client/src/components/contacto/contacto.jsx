@@ -24,9 +24,9 @@ export function Contacto() {
   };
 
   return (
-    <div className="contact-container" >
+    <div id='contacto' className="contact-container" >
 
-        <h2> Contacto </h2>
+        <h2> CONTACTO </h2>
 
     <Box
       component="form"

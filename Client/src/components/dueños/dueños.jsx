@@ -15,7 +15,7 @@ export function Dueños(){
 
     return(
         <section className="container-dueños">
-            <h2> ¿Quienes Somos? </h2>
+            <h2> ¿QUIENES SOMOS? </h2>
             <div className="list-dueños">
                 {dueños.map(dueño => (
                     <NavLink  to={`/dueños/${dueño.id}`} key={dueño.id} className="dueños-card">

@@ -10,7 +10,7 @@ import "./slider.css"
 export function Slider(){
 
     return(
-        <div className="inicio" >
+        <div className="inicio" id="inicio" >
 
         <Carousel showThumbs={true} autoPlay infiniteLoop>  
             <div>

@@ -17,8 +17,8 @@ export function Areas() {
     ];
 
     return (
-        <div className="container-areas">
-            <h2> Areas </h2>
+        <div id="areas" className="container-areas">
+            <h2> AREAS</h2>
             <div className="personal-list">
                 {personal.map(person => (
                     <div key={person.id} className="personal-card-css">

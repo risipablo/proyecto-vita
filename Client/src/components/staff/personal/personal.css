@@ -2,31 +2,35 @@
     min-height: 60vh;
     padding: 4.8rem 0;
     background-color: rgb(250, 252, 254);
+    text-align: center;
     display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .personal-container h2 {
     color: #2e3762;
     letter-spacing: 3px;
-    font-size: 1.8rem;
-    margin: 2rem auto 1rem;
+    font-size: 2rem;
+    margin: 2.5rem 0 1rem;
     font-weight: 700;
     text-align: center; /
 }
 
 .listado {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(1, 2fr); 
+    gap: 40px; 
     margin: 2rem auto;
     padding: 1rem 2rem;
-    max-width: 1200px; 
+    max-width: 1200px;
 }
 
 .card {
     background: rgb(247, 245, 245); 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden; 
     padding: 1rem 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -44,26 +48,42 @@
 } */
 
 .card-content {
-    padding: 2rem; 
+    padding: 1rem 0; 
 }
 
 .card-content h3 {
     color: #2e3762; 
     font-size: 1.4rem;
-    margin: 0;
+    margin: 1.2rem 0 ;
 }
 
 .card-content h4 {
     color: #666; 
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    padding: 0 .4rem;
 }
 
 @media (min-width: 850px) {
     .listado {
         display: grid;
-        grid-template-columns: repeat(4, 2fr); 
-        gap: 30px; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 40px; 
+        padding: 1rem ;
+    }
+
+    .card {
+        background: rgb(247, 245, 245); 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        overflow: hidden; 
+        padding: 1.2rem .8rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+    
+    .card-content {
+        padding: 1rem; 
     }
     
 }

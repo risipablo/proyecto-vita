@@ -35,48 +35,50 @@ export function Navbar() {
                 <div className="navbar">
                     <div className={`menu ${openMenu ? 'open' : ''}`}>
                         <ul>
-                            <NavLink to="/" onClick={closeMenu}>
+                            <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <HomeIcon />
-                                    <a className='active'>Inicio</a>
+                                    <a className='active' href='#inicio'>Inicio</a>
                                 </div>
-                            </NavLink>
-                            <NavLink to="/areas" onClick={closeMenu}>
+                            </li>
+                            <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <BusinessIcon />
-                                    <a className='active'>Áreas</a>
+                                    <a href='#areas' className='active'>Áreas</a>
                                 </div>
-                            </NavLink>
-                            <div className="nav-item" onClick={toggleSubmenu}>
-                                <InfoIcon />
-                                <a className='active'>¿Quiénes Somos?</a>
-                                <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
-                                    <NavLink to="/dueños/sabrina" className="submenu-item" onClick={closeMenu}>Sabrina Ramos</NavLink>
-                                    <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>Rodrigo Feijoo</NavLink>
-                                    <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>Daian Rodríguez</NavLink>
+                            </li>
+                            <li>
+                                <div className="nav-item" onClick={toggleSubmenu}>
+                                    <InfoIcon />
+                                    <a className='active'>¿Quiénes Somos?</a>
+                                    <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
+                                        <NavLink to="/dueños/sabrina" className="submenu-item" onClick={closeMenu}>Sabrina Ramos</NavLink>
+                                        <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>Rodrigo Feijoo</NavLink>
+                                        <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>Daian Rodríguez</NavLink>
+                                    </div>
                                 </div>
-                            </div>
-                            <NavLink to="/personal" onClick={closeMenu}>
+                            </li>
+                            <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <GroupIcon />
-                                    <a className='active'>Equipo</a>
+                                    <a href='#equipo' className='active'>Equipo</a>
                                 </div>
-                            </NavLink>
-                            <NavLink to="/ubicacion" onClick={closeMenu}>
+                            </li>
+                            <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <LocationOnIcon />
-                                    <a className='active'>Ubicación</a>
+                                    <a href='#ubicacion' className='active'>Ubicación</a>
                                 </div>
-                            </NavLink>
-                            <NavLink to="/contacto" onClick={closeMenu}>
+                            </li>
+                            <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <ContactMailIcon />
-                                    <a className='active'>Contacto</a>
+                                    <a href='#contacto' className='active'>Contacto</a>
                                 </div>
-                            </NavLink>
+                            </li>
                         </ul>
                     </div>
-                    
+
                     <div onClick={toggleMenu} className={`menu-icon ${openMenu ? 'open' : ''}`}>
                         <span></span>
                         <span></span>
