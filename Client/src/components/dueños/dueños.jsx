@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom"
 export function Dueños(){
 
     const dueños = [
-        {id:1 , nombre:"Sabrina Ramos", rol:"Psicóloga", image:d1},
+        {id:1 , nombre:"Sabrina Ramos", rol:"Licenciada en Psicología", image:d1},
         {id:2 , nombre:"Rodrigo Feijoo", rol:"Entrenador Fisico", image:d2},
         {id:3 , nombre:"Daian Rodríguez", rol:"Lic. en Kinesiología", image:d3}
     ]

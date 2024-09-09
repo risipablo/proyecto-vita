@@ -8,7 +8,7 @@ export function DueñosDetails(){
     const {id} = useParams();
 
     const dueños = [
-        { id: 1, nombre: "Sabrina Ramos", rol: "Psicóloga", image:d1, especialidades: "Psicología Clínica Integral (Adolescentes y Adultos), Técnicas basadas en Bioneuroemoción, Programación Neurolingüística, Técnicas de cambio de creencias, Terapia Transgeneracional, Terapia Floral, Neurorehabilitación"},
+        { id: 1, nombre: "Sabrina Ramos", rol: "Licenciada en Psicología", image:d1, especialidades: "Psicología Clínica Integral (Adolescentes y Adultos), Técnicas basadas en Bioneuroemoción, Programación Neurolingüística, Técnicas de cambio de creencias, Terapia Transgeneracional, Terapia Floral, Neurorehabilitación"},
         { id: 2, nombre: "Rodrigo Feijoo", rol: "Entrenador Fisico", image:d2, especialidades:"Instructor en Musculación y Monitoreo de Gimnasio, Instructor en Entrenamiento Funcional y HIIT, Instructor en Crosstraining, Asesoramiento en Nutrición Deportiva" },
         { id: 3, nombre: "Daian Rodríguez", rol: "Lic. en Kinesiología", image:d3, especialidades:"Kinesiología, Fisioterapia, Osteopatía, Neurorehabilitación, MEP"  }
     ];
@@ -19,9 +19,11 @@ export function DueñosDetails(){
     return(
         <div className="detail-container">
             <div className="detail-list">
-                <img src={dueño.image} alt={dueño.rol} />
-                <h3>{dueño.nombre}</h3>
-                <h4>{dueño.rol}</h4>
+                <div className="detail-image">
+                    <img src={dueño.image} alt={dueño.rol} />
+                    <h3>{dueño.nombre}</h3>
+                    <h4>{dueño.rol}</h4>
+                </div>
 
                 <div className="texto">
                     <p> Especialidades </p>

@@ -1,40 +1,98 @@
 .contact-container {
-    margin: auto;
-    padding: 4.8rem 0;
-}
+    font-family: "Poppins", sans-serif;
+    padding: 7rem 2rem;
+    justify-content: center;
+  }
+  
+  .consulta-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+  
+  .consulta {
+    flex: 1;
+    margin-right: 2rem;
+  }
+  
+  .consulta h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #2e3762;
 
-.contact-container h2{
-    font-size: 2rem;
-    margin-bottom: 1.8rem;
-    font-weight: 700;
-    color:#2e3762;
-    letter-spacing: 3px;
-}
+  }
+  
+  .consulta p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
 
-
-.contact-container form {
+  .consultas{
+    margin: 2rem 0;
+  }
+  
+  .consultas ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .consultas li {
+    font-size: 1rem;
+    margin: 1rem auto;
+    color: #555;
+  }
+  
+  .map-container {
+    flex: 1;
+  }
+  
+  .form-container {
+    margin: 4rem 0 2rem;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    gap: 22px;
-}
-
-.contacto-form{
-    background-color: #f0f4f8; 
-    border-radius: 10px; 
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-
-
-
-@media (min-width: 850px) {
-    .contact-container {
-        padding: 4.8rem 2rem;
-        width: 80%;
+    gap: 1.5rem;
+  }
+  
+  input, select, textarea {
+    width: 80%;
+    border-radius: 12px 8px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .consul   {
+    width: 120px;
+    padding: .7rem 1rem;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    background-color: #2e3762;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+   .consul:hover {
+    background-color: #375094;
+  }
+  
+  @media (max-width: 850px) {
+    .consulta-container {
+      flex-direction: column;
     }
-    .contact-container h2{
-        font-size: 2.2rem;
+  
+    .map-container {
+      margin-top: 2rem;
     }
-    
-}
+
+    .form-container{
+        width: 100%;
+    }
+  }
+  

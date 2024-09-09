@@ -94,6 +94,11 @@
         "id":15,
         "nombre": "Gabriela Gonzales",
         "rol": "Lic. en Psicologia"
+    },
+    {
+        "id":16,
+        "nombre": " Ezequiel Cona",
+        "rol": "Lic. en Psicologia"
     }
 
 ]

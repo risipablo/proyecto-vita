@@ -6,8 +6,8 @@ import InfoIcon from '@mui/icons-material/Info';
 import GroupIcon from '@mui/icons-material/Group';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import logo from '../imagenes/logo.png'; 
-import "./navbar.css"
+import logo from '../imagenes/logo.png';
+import './navbar.css';
 
 export function Navbar() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -15,13 +15,11 @@ export function Navbar() {
 
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
-        document.body.classList.toggle('open', !openMenu);
     };
 
     const closeMenu = () => {
         setOpenMenu(false);
         setIsSubmenuOpen(false);
-        document.body.classList.remove('open');
     };
 
     const toggleSubmenu = () => {
@@ -38,53 +36,69 @@ export function Navbar() {
                             <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <HomeIcon />
-                                    <a className='active' href='#inicio'>Inicio</a>
+                                    <NavLink exact to="/" activeClassName="active" className="nav-link">
+                                        Inicio
+                                    </NavLink>
                                 </div>
                             </li>
                             <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <BusinessIcon />
-                                    <a href='#areas' className='active'>Áreas</a>
+                                    <NavLink exact to="#areas"  activeClassName="active" >
+                                        Áreas
+                                    </NavLink>
                                 </div>
                             </li>
-                            <li>
-                                <div className="nav-item" onClick={toggleSubmenu}>
+                            <li onClick={toggleSubmenu}>
+                                <div className="nav-item" >
                                     <InfoIcon />
-                                    <a className='active'>¿Quiénes Somos?</a>
-                                    <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
-                                        <NavLink to="/dueños/sabrina" className="submenu-item" onClick={closeMenu}>Sabrina Ramos</NavLink>
-                                        <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>Rodrigo Feijoo</NavLink>
-                                        <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>Daian Rodríguez</NavLink>
-                                    </div>
+                                    <NavLink to="#quienes"  activeClassName="active" >¿Quiénes Somos?</NavLink>
                                 </div>
+                                {/* <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
+                                    <NavLink to="/dueños/:id" className="submenu-item" onClick={closeMenu}>
+                                        Sabrina Ramos
+                                    </NavLink>
+                                    <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>
+                                        Rodrigo Feijoo
+                                    </NavLink>
+                                    <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>
+                                        Daian Rodríguez
+                                    </NavLink>
+                                </div> */}
                             </li>
-                            <li onClick={closeMenu}>
+                            <li onClick={closeMenu} >
                                 <div className="nav-item">
                                     <GroupIcon />
-                                    <a href='#equipo' className='active'>Equipo</a>
+                                    <NavLink  exact to="/personal" activeClassName="active" className="nav-link"  >
+                                        Equipo
+                                    </NavLink>
                                 </div>
                             </li>
                             <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <LocationOnIcon />
-                                    <a href='#ubicacion' className='active'>Ubicación</a>
+                                    <NavLink exact to="#ubicacion"  activeClassName="active" >
+                                        Ubicación
+                                    </NavLink>
                                 </div>
                             </li>
                             <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <ContactMailIcon />
-                                    <a href='#contacto' className='active'>Contacto</a>
+                                    <NavLink exact to="/contacto"  activeClassName="active" className="nav-link">
+                                        Contacto
+                                    </NavLink>
                                 </div>
                             </li>
                         </ul>
                     </div>
+
 
                     <div onClick={toggleMenu} className={`menu-icon ${openMenu ? 'open' : ''}`}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-
                     <div className="logo">
                         <NavLink to="/">
                             <img src={logo} alt="logo" />
