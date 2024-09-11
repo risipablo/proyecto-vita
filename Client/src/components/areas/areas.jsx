@@ -17,7 +17,7 @@ export function Areas() {
     ];
 
     return (
-        <div id="areas" className="container-areas">
+        <div className="container-areas">
             <h2> AREAS</h2>
             <div className="personal-list">
                 {personal.map(person => (

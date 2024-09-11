@@ -1,25 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./contacto.css";
+import {toast, Toaster} from 'react-hot-toast';
+
 
 export function Contacto() {
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     reason: '',
     message: ''
   });
+
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+
+  
+    setErrors({
+      ...errors,
+      [e.target.name]: '' 
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data:', formData);
+  
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'El nombre es obligatorio';
+    if (!formData.email) newErrors.email = 'El email es obligatorio';
+    if (!formData.phone) newErrors.phone = 'El teléfono es obligatorio';
+    if (!formData.reason) newErrors.reason = 'El motivo es obligatorio';
+    if (!formData.message) newErrors.message = 'El mensaje es obligatorio';
+  
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      toast.promise(
+        fetch('http://localhost:3001/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+          
+        }),
+        {
+          loading: 'Enviando...',
+          success: 'Correo enviado',
+          error: 'Error al enviar el correo',
+        }
+      )
+      .then(() => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          reason: '',
+          message: ''
+        });
+      })
+      .catch((error) => console.error('Error:', error));
+    }
   };
+  
 
   return (
     <div className="contact-container">
@@ -61,8 +109,21 @@ export function Contacto() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Ingrese su nombre"
+            className={errors.name ? 'error' : ''}
             required
           />
+          {errors.name && <span className="error-text">{errors.name}</span>}
+
+          <input
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Ingrese su email"
+            className={errors.email ? 'error' : ''}
+            required
+          />
+          {errors.email && <span className="error-text">{errors.email}</span>}
 
           <input
             type="tel"
@@ -70,19 +131,23 @@ export function Contacto() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Ingrese su teléfono"
+            className={errors.phone ? 'error' : ''}
             required
           />
+          {errors.phone && <span className="error-text">{errors.phone}</span>}
 
           <select
             name="reason"
             value={formData.reason}
             onChange={handleChange}
+            className={errors.reason ? 'error' : ''}
             required
           >
             <option value="">Selecciona un motivo</option>
             <option value="consultas">Consultas</option>
             <option value="turnos">Turnos</option>
           </select>
+          {errors.reason && <span className="error-text">{errors.reason}</span>}
 
           <textarea
             name="message"
@@ -90,11 +155,14 @@ export function Contacto() {
             onChange={handleChange}
             placeholder="Escribe tu mensaje aquí"
             rows="4"
+            className={errors.message ? 'error' : ''}
             required
           ></textarea>
+          {errors.message && <span className="error-text">{errors.message}</span>}
 
           <button className='consul' type="submit">Enviar</button>
         </form>
+        <Toaster/>
       </div>
     </div>
   );

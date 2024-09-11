@@ -41,7 +41,7 @@
 
     .dueños-card img{   
         cursor: pointer;
-        max-width: 240px;
+        max-width: 228px;
         height: auto;
         object-fit: cover;
         border-radius: 100%;
@@ -87,7 +87,7 @@
     margin-top: 1rem;
     
     letter-spacing: 3px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .dueños-card h4 {
@@ -97,6 +97,6 @@
     padding: 0 1rem;
     letter-spacing: 3px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
 }
 

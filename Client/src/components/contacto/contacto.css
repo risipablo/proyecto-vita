@@ -70,10 +70,11 @@
     padding: .7rem 1rem;
     border: none;
     font-size: 1rem;
-    letter-spacing: 3px;
+    font-weight: 500;
+    /* letter-spacing: 2px; */
     border-radius: 5px;
     background-color: #2e3762;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -81,6 +82,17 @@
    .consul:hover {
     background-color: #375094;
   }
+
+  .error {
+    border: 2px solid rgb(237, 7, 7);
+  }
+  
+  .error-text {
+    color: rgb(237, 7, 7);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
   
   @media (max-width: 850px) {
     .consulta-container {
@@ -93,6 +105,7 @@
 
     .form-container{
         width: 100%;
+        
     }
   }
   

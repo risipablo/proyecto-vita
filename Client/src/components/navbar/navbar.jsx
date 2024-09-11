@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
-import BusinessIcon from '@mui/icons-material/Business';
 import InfoIcon from '@mui/icons-material/Info';
 import GroupIcon from '@mui/icons-material/Group';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import logo from '../imagenes/logo.png';
 import './navbar.css';
@@ -23,8 +21,11 @@ export function Navbar() {
     };
 
     const toggleSubmenu = () => {
-        setIsSubmenuOpen(!isSubmenuOpen);
+        if (window.innerWidth < 1050) {
+            setIsSubmenuOpen(!isSubmenuOpen);
+        }
     };
+
 
     return (
         <nav>
@@ -41,31 +42,27 @@ export function Navbar() {
                                     </NavLink>
                                 </div>
                             </li>
-                            <li onClick={closeMenu}>
+
+                            <li onClick={toggleSubmenu} className="has-submenu">
                                 <div className="nav-item">
-                                    <BusinessIcon />
-                                    <NavLink exact to="#areas"  activeClassName="active" >
-                                        Áreas
+                                    <InfoIcon />
+                                    <NavLink to="#quienes" activeClassName="active">
+                                        ¿Quiénes Somos?
                                     </NavLink>
                                 </div>
-                            </li>
-                            <li onClick={toggleSubmenu}>
-                                <div className="nav-item" >
-                                    <InfoIcon />
-                                    <NavLink to="#quienes"  activeClassName="active" >¿Quiénes Somos?</NavLink>
-                                </div>
-                                {/* <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
+                                <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
                                     <NavLink to="/dueños/:id" className="submenu-item" onClick={closeMenu}>
-                                        Sabrina Ramos
+                                       <p> Sabrina Ramos </p> 
                                     </NavLink>
                                     <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>
-                                        Rodrigo Feijoo
+                                        <p> Rodrigo Feijoo </p>
                                     </NavLink>
                                     <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>
-                                        Daian Rodríguez
+                                        <p> Daian Rodríguez </p>
                                     </NavLink>
-                                </div> */}
+                                </div>
                             </li>
+                            
                             <li onClick={closeMenu} >
                                 <div className="nav-item">
                                     <GroupIcon />
@@ -74,14 +71,7 @@ export function Navbar() {
                                     </NavLink>
                                 </div>
                             </li>
-                            <li onClick={closeMenu}>
-                                <div className="nav-item">
-                                    <LocationOnIcon />
-                                    <NavLink exact to="#ubicacion"  activeClassName="active" >
-                                        Ubicación
-                                    </NavLink>
-                                </div>
-                            </li>
+
                             <li onClick={closeMenu}>
                                 <div className="nav-item">
                                     <ContactMailIcon />
@@ -109,3 +99,23 @@ export function Navbar() {
         </nav>
     );
 }
+
+
+
+                            {/* <li onClick={closeMenu}>
+                                <div className="nav-item">
+                                    <LocationOnIcon />
+                                    <NavLink exact to="#ubicacion"  activeClassName="active" >
+                                        Ubicación
+                                    </NavLink>
+                                </div>
+                            </li> */}
+
+                                                        {/* <li onClick={closeMenu}>
+                                <div className="nav-item" >
+                                    <BusinessIcon />
+                                    <NavLink exact   activeClassName="active" >
+                                        Áreas
+                                    </NavLink>
+                                </div>
+                            </li> */}

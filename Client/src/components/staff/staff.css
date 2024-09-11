@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 5.2rem 0;
+    margin: 5.3rem 0;
     width: 100%;
     background-size: cover;
     background-position: center center;
@@ -87,7 +87,7 @@
 
 @media (min-width: 768px) {
     .ver-mas-btn {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         width: 30%;
     }
 
@@ -104,8 +104,8 @@
     }
 
     .ver-mas-btn {
-        padding: 1rem 2rem;
-        width: 25%;
+        padding: 1rem 1rem;
+        width: 20%;
     }
 
     .image-container p {
