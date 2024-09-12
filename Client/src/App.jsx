@@ -12,25 +12,27 @@ import { Contacto } from "./components/contacto/contacto"
 import { Personal } from "./components/staff/personal/personal"
 
 
-
-
 function App() {
+
 
   return (
     <>
-      <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/personal" element={<Personal/>} />
-        <Route path="dueños" element={<Dueños />} />
-        <Route path="/dueños/:id" element={ <DueñosDetails/> }/>
-        <Route path="/contacto" element={<Contacto/>} />
-      </Routes>
-      <TopScroll/>
-      <Whatsapp/>
-      <Footer/>
-      </BrowserRouter>
+    
+
+        <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/personal" element={<Personal/>} />
+          <Route path="dueños" element={<Dueños />} />
+          <Route path="/dueños/:id" element={ <DueñosDetails/> }/>
+          <Route path="/contacto" element={<Contacto/>} />
+        </Routes>
+        <TopScroll/>
+        <Whatsapp/>
+        <Footer/>
+        </BrowserRouter>
+
     </>
   )
 }

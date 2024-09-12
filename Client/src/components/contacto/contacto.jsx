@@ -3,6 +3,9 @@ import "./contacto.css";
 import {toast, Toaster} from 'react-hot-toast';
 
 
+const serverFront = 'https://proyecto-vita.onrender.com';
+// const serverFront = 'http://localhost:3001'
+
 export function Contacto() {
   const [formData, setFormData] = useState({
     name: '',
@@ -41,7 +44,7 @@ export function Contacto() {
       setErrors(newErrors);
     } else {
       toast.promise(
-        fetch('http://localhost:3001/send-email', {
+        fetch(`${serverFront}/send-email`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

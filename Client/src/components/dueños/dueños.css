@@ -24,6 +24,7 @@
     text-align: center;
     gap: 30px;
     padding: 1rem .7rem;
+    
 }
 
 @media (min-width:850px){
@@ -37,6 +38,7 @@
 
     .container-dueños h4{
         font-size: .8rem
+        
     }
 
     .dueños-card img{   
@@ -87,7 +89,7 @@
     margin-top: 1rem;
     
     letter-spacing: 3px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .dueños-card h4 {
@@ -97,6 +99,6 @@
     padding: 0 1rem;
     letter-spacing: 3px;
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
