@@ -181,6 +181,10 @@ body.open .overlay {
         margin-left: 2rem; 
     }
 
+    .logo img{
+        width: 100px;
+    }
+
     .navbar{
         padding: 8px 0;
     }
