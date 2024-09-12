@@ -4,7 +4,14 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+    origin: ['http://localhost:5173', 'https://proyecto-vita.onrender.com', 'https://proyecto-vita.vercel.app/'],
+    methods: 'GET,POST,DELETE,PATCH',
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
