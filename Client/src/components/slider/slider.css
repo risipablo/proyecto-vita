@@ -53,14 +53,14 @@
 .turno{
     margin-top: 25px;
     padding: .7rem 2.2rem;
-    animation: tp-rotate 2.0s infinite linear;
     border-radius: 12px 12px;
     border: none;
     background-color: rgb(29, 75, 126);
     
     &:hover{
         transition: .4s;
-        background-color: rgb(29, 75, 126,.7);
+        transform: scale(0.95); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     }
 }
 

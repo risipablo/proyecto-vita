@@ -3,6 +3,7 @@ import "./details.css"
 import d1 from "../image/psicologa.jpg"
 import d2 from "../image/funcional.jpg"
 import d3 from "../image/kine.jpg"
+import { Helmet } from "react-helmet"
 
 export function DueñosDetails(){
     const {id} = useParams();
@@ -18,6 +19,11 @@ export function DueñosDetails(){
 
     return(
         <div className="detail-container">
+
+            <Helmet>
+                <title> Nosotros </title>
+            </Helmet>
+            
             <div className="detail-list">
                 <div className="detail-image">
                     <img src={dueño.image} alt={dueño.rol} />

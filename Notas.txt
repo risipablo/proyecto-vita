@@ -1,5 +1,0 @@
-Ajustar tamaño de cartas, fotos de dueños, titulos y parrafos.
-Ajustar tamaño de los NavLink.
-Agregar descripcion de cada uno de los dueños.
-Seccion de contacto. Realizar con nodemailer la entrada de correos electronicos. 
-

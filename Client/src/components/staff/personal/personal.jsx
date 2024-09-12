@@ -2,6 +2,7 @@
 import { useState } from "react"
 import "./personal.css"
 import personalData from "./personalData.json"
+import Helmet from 'react-helmet'
 
 
 export function Personal(){
@@ -9,6 +10,10 @@ export function Personal(){
 
     return(
         <div className="personal-container">
+
+        <Helmet>
+            <title>Especialestas - Casa Vita</title>
+        </Helmet>
             
             <h2> ESPECIALISTAS</h2>
 

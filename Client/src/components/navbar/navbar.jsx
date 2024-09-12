@@ -51,13 +51,13 @@ export function Navbar() {
                                     </NavLink>
                                 </div>
                                 <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
-                                    <NavLink to="/dueños/:id" className="submenu-item" onClick={closeMenu}>
+                                    <NavLink to="/dueños/1" className="submenu-item" onClick={closeMenu}>
                                        <p> Sabrina Ramos </p> 
                                     </NavLink>
-                                    <NavLink to="/dueños/rodrigo" className="submenu-item" onClick={closeMenu}>
+                                    <NavLink to="/dueños/2" className="submenu-item" onClick={closeMenu}>
                                         <p> Rodrigo Feijoo </p>
                                     </NavLink>
-                                    <NavLink to="/dueños/daian" className="submenu-item" onClick={closeMenu}>
+                                    <NavLink to="/dueños/3" className="submenu-item" onClick={closeMenu}>
                                         <p> Daian Rodríguez </p>
                                     </NavLink>
                                 </div>

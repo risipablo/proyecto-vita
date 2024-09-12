@@ -12,7 +12,6 @@
     min-height: 60vh;
     padding: 4.8rem 0;
     text-align: center;
-    font-optical-sizing: auto;
 }
 
 
@@ -26,15 +25,92 @@
 }
 
 
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+  }
+  
+  .contacto-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+
+  .contacto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* margin: 2rem 0; */
+    min-height: 30vh;
+    padding: 4rem 2rem ;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contacto-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color:#2e3762;
+ 
+  }
+  
+  .contacto-link {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(28, 84, 148);
+    padding: .7rem 1.5rem;
+    margin: 1.2rem 0;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+  
+  .contacto-link:hover {
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+
+
+
+  @media (min-width: 768px) {
+    .contacto-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 4.8rem 2rem;
+      min-height: 40vh;
+    }
+  
+    .contacto-container h3 {
+      font-size: 1.8rem;
+      margin-right: 2rem;
+    }
+  
+    .contacto-link {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
 @media (min-width: 850px) {
     .container-ubicacion{
         /* padding: 4.8rem 2rem; */
-        margin: 0 auto;
         width: 100%;
     }
 
     .container-ubicacion h2{
         font-size: 2.2rem;
+    }
+    
+    .maps{
+        width: 100%;
     }
     
 }

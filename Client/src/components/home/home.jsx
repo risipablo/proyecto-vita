@@ -5,12 +5,17 @@ import { Dueños } from '../dueños/dueños';
 import { Slider } from '../slider/slider';
 import { Staff } from '../staff/staff';
 import "./home.css"
+import { Helmet } from 'react-helmet';
 
 
 export function Home(){
 
     return(
         <div className="container-home">
+
+            <Helmet>
+                <title>Inicio - Casa Vita</title>
+            </Helmet>
 
             <Slider/>
             <Areas/>
@@ -25,11 +30,12 @@ export function Home(){
                 </div>
             </section>
 
-            {/* <section className="contact-container">
-                <NavLink to="/contacto">
-                    ver mas
+            <section className="contacto-container">
+                <h3> Para turnos y consultas, visita la sección de contacto</h3>
+                <NavLink to="/contacto" className="contacto-link">
+                    Ver más
                 </NavLink>
-            </section> */}
+            </section> 
 
         </div>
     )
