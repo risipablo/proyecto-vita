@@ -13,18 +13,22 @@ export function Navbar() {
 
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
+         document.body.classList.toggle('open',!openMenu);
     };
 
     const closeMenu = () => {
         setOpenMenu(false);
-        setIsSubmenuOpen(false);
+         document.body.classList.remove('open');
     };
 
     const toggleSubmenu = () => {
-        if (window.innerWidth < 1050) {
-            setIsSubmenuOpen(!isSubmenuOpen);
-        }
+        setIsSubmenuOpen(!isSubmenuOpen)
     };
+
+
+    const closeSubMenu = () => {
+        setIsSubmenuOpen(false)
+    }
 
 
     return (
@@ -43,25 +47,31 @@ export function Navbar() {
                                 </div>
                             </li>
 
-                            <li onClick={toggleSubmenu} className="has-submenu">
-                                <div className="nav-item">
+                            <li>
+                                <div className="nav-item" onClick={toggleSubmenu}>
                                     <InfoIcon />
-                                    <NavLink to="#quienes" activeClassName="active">
+                                    <NavLink  activeClassName="active">
                                         ¿Quiénes Somos?
                                     </NavLink>
                                 </div>
+
                                 <div className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
-                                    <NavLink to="/dueños/1" className="submenu-item" onClick={closeMenu}>
+                                    <NavLink to="/dueños/1" className="submenu-item"  onClick={closeSubMenu}>
                                        <p> Sabrina Ramos </p> 
                                     </NavLink>
+
                                     <NavLink to="/dueños/2" className="submenu-item" onClick={closeMenu}>
                                         <p> Rodrigo Feijoo </p>
                                     </NavLink>
+
                                     <NavLink to="/dueños/3" className="submenu-item" onClick={closeMenu}>
                                         <p> Daian Rodríguez </p>
                                     </NavLink>
                                 </div>
+                            
+
                             </li>
+ 
                             
                             <li onClick={closeMenu} >
                                 <div className="nav-item">

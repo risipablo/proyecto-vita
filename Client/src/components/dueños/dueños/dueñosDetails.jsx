@@ -4,6 +4,7 @@ import d1 from "../image/psicologa.jpg"
 import d2 from "../image/funcional.jpg"
 import d3 from "../image/kine.jpg"
 import { Helmet } from "react-helmet"
+import { motion } from "framer-motion" // <-- Agregado
 
 export function DueñosDetails(){
     const {id} = useParams();
@@ -14,36 +15,63 @@ export function DueñosDetails(){
         { id: 3, nombre: "Daian Rodríguez", rol: "Lic. en Kinesiología", image:d3, especialidades:"Kinesiología, Fisioterapia, Osteopatía, Neurorehabilitación, MEP"  }
     ];
 
-
     const dueño = dueños.find(d => d.id === parseInt(id))
 
     return(
         <div className="detail-container">
-
             <Helmet>
                 <title> Nosotros </title>
             </Helmet>
             
-            <div className="detail-list">
-                <div className="detail-image">
+            <motion.div 
+                className="detail-list"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+            >
+                <motion.div 
+                    className="detail-image"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     <img src={dueño.image} alt={dueño.rol} />
                     <h3>{dueño.nombre}</h3>
                     <h4>{dueño.rol}</h4>
-                </div>
+                </motion.div>
 
-                <div className="texto">
+                <motion.div 
+                    className="texto"
+                    initial={{ x: 50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
                     <p> Especialidades </p>
                     {dueño.especialidades && (
-                        <ul className="especialidades-list">
-                            
+                        <motion.ul 
+                            className="especialidades-list"
+                            initial="hidden"
+                            animate="visible"
+                            variants={{
+                                hidden: {},
+                                visible: { transition: { staggerChildren: 0.1 } }
+                            }}
+                        >
                             {dueño.especialidades.split(',').map((especialidad,index) => (
-                                <li key={index}>{especialidad}</li>
+                                <motion.li
+                                    key={index}
+                                    variants={{
+                                        hidden: { opacity: 0, x: 20 },
+                                        visible: { opacity: 1, x: 0 }
+                                    }}
+                                >
+                                    {especialidad}
+                                </motion.li>
                             ))}
-                        </ul>
+                        </motion.ul>
                     )}
-                </div>
- 
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     )
 }
